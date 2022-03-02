@@ -68,7 +68,7 @@ svg.selectAll(".month")
     .attr("id", function(d,i){ return month[i] })
     .attr("d", monthPath);
 
-d3.csv("Events_date_weekday.csv", function(error, csv) {
+d3.csv("data.csv", function(error, csv) {
 
   csv.forEach(function(d) { //d has Date,Year,Month,Day,Weekday,Event
     d.Event = d.Event;
