@@ -12,7 +12,7 @@ var day = d3.time.format("%w"),
 		
 var color = d3.scale.linear().range(["white", '#002b53'])
     .domain([0, 1])
-    
+
 var svg = d3.select(".calender-map").selectAll("svg")
     .data(d3.range(1818, 1881))
   .enter().append("svg")
@@ -120,16 +120,25 @@ function monthPath(t0) {
 function searchCalendar(){ //
   // Selecting the input element and get its value 
   var inputVal = document.getElementById("myInput").value;
+  var myArray = inputVal.split(" ");
   //changes color of square in calendar
   d3.csv("Events_date_weekday.csv", function(error, csv) {
     csv.forEach(function(d) { //d has Date,Year,Month,Day,Weekday,Event
-      if(d.Event.toLowerCase().includes(inputVal.toLowerCase())){
-        d.Color = "#623216";
+      d.Color = "#623216";
+      let words = inputVal.split(" ");
+      for (word in words){
+        if(!(d.Event.toLowerCase().includes(words[word].toLowerCase()))){
+          d.Color = "#B4B782";
+        }
       }
-      else{
-        d.Color = "#B4B782";
-      }
+   //   if(!(d.Event.toLowerCase().includes(words[word].toLowerCase()))){
+   //     d.Color = "#623216";
+    //  }
+   //   else{
+   //     d.Color = "#B4B782";
+      //}
     });
+
    var Event_Max = d3.max(csv, function(d) { return d.Event; });
     var data = d3.nest()
       .key(function(d) { return d.Date; })

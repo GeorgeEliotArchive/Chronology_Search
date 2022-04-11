@@ -33,6 +33,7 @@ axios
       
     };
   });
+  console.log("csv start");
   const data = [];
   col_len = newCollection.length;
   data.push(newCollection[col_len-1].element_texts[0].text);
@@ -52,7 +53,7 @@ axios
     if(err) {
       return console.log(err);
     }
-    console.log("success")
+    console.log("success");
   });
   // create a new "State" object without mutating 
   // the original State object. 
