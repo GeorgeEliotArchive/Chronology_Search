@@ -2,7 +2,7 @@
 # Version 1.1
 ## Description
 
-The George Eliot Chronology is a group of visualizations that help researchers find over 3,000 dated events in George Eliot's life. It is an important resource for biographers, for biographical criticism of her work, or to study social and intellectual influences on her writing. f .
+The George Eliot Chronology is a group of visualizations that help researchers identify over 3,000 dated events in George Eliot's life. Information has been extracted from and verified using primary sources, primarily dated letters and journal entries. It is an important resource for biographers, for biographical criticism of her work, or for anyone studying the social and intellectual influences on George Eliot's writing. 
 
 ## Setup
 
